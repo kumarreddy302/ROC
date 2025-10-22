@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sample App • Modern Landing Page</title>
+  <meta name="description" content="A clean, responsive HTML landing page template you can copy and adapt." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0f172a;         /* slate-900 */
+      --panel:#111827cc;    /* semi-transparent panel */
+      --text:#e5e7eb;       /* slate-200 */
+      --muted:#9ca3af;      /* slate-400 */
+      --accent:#7c3aed;     /* violet-600 */
+      --accent-2:#22d3ee;   /* cyan-400 */
+      --ring: 0 0 0 3px #7c3aed33;
+      --radius: 16px;
+      --shadow: 0 10px 25px rgba(0,0,0,.35);
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0; font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif;
+      background: radial-gradient(1200px 600px at 10% 0%, #1f2937 0, #0b1020 60%, #070a14 100%), var(--bg);
+      color:var(--text);
+      line-height:1.6;
+    }
+    a{color:inherit; text-decoration:none}
+    .container{max-width:1100px; margin:0 auto; padding:0 20px}
+
+    /* Header */
+    header{position:sticky; top:0; z-index:5; background:linear-gradient(180deg, #0b1020ee, #0b1020cc 70%, transparent); backdrop-filter: blur(12px)}
+    .nav{display:flex; align-items:center; justify-content:space-between; padding:14px 0}
+    .brand{display:flex; gap:10px; align-items:center; font-weight:700}
+    .logo{width:34px; height:34px; border-radius:10px; background:linear-gradient(135deg,var(--accent),var(--accent-2)); box-shadow:var(--shadow)}
+    .nav a{color:var(--muted)}
+    .menu{display:flex; gap:18px; align-items:center}
+    .cta{padding:10px 16px; background:linear-gradient(135deg,var(--accent),var(--accent-2)); color:white; border:none; border-radius:12px; font-weight:600; box-shadow:var(--shadow)}
+    .cta:hover{filter:brightness(1.05)}
+    .hamburger{display:none; cursor:pointer; padding:8px; border-radius:10px}
+    .hamburger:focus{outline:none; box-shadow:var(--ring)}
+
+    /* Hero */
+    .hero{padding:72px 0 36px}
+    .hero-inner{display:grid; grid-template-columns:1.2fr 1fr; gap:36px; align-items:center}
+    h1{font-size:clamp(32px, 5vw, 54px); line-height:1.1; margin:0 0 12px}
+    .lead{font-size:clamp(16px, 2vw, 18px); color:var(--muted)}
+    .hero-card{background:linear-gradient(180deg,#0f172acc,#0b1020cc); border:1px solid #3b3f51; border-radius:var(--radius); padding:22px; box-shadow:var(--shadow)}
+    .kpis{display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin-top:18px}
+    .kpi{background:#0b1020; border:1px solid #2a2e3d; border-radius:14px; padding:16px; text-align:center}
+    .kpi strong{display:block; font-size:22px}
+
+    /* Features */
+    section{padding:56px 0}
+    .section-title{font-size:28px; margin:0 0 8px}
+    .section-sub{color:var(--muted); margin:0 0 24px}
+    .grid{display:grid; gap:18px}
+    .features{grid-template-columns:repeat(3,1fr)}
+    .card{background:linear-gradient(180deg,#0f172acc,#0b1020cc); border:1px solid #2a2e3d; border-radius:var(--radius); padding:20px; box-shadow:var(--shadow)}
+    .card h3{margin:0 0 8px}
+
+    /* Pricing */
+    .pricing{grid-template-columns:repeat(3,1fr)}
+    .price{font-size:32px; font-weight:700}
+    .badge{display:inline-block; font-size:12px; padding:4px 8px; border:1px solid #3b3f51; border-radius:999px; color:var(--muted)}
+    .btn{display:inline-block; margin-top:12px; padding:12px 16px; border-radius:12px; background:#121a33; border:1px solid #2a2e3d; color:var(--text); font-weight:600}
+    .btn.primary{background:linear-gradient(135deg,var(--accent),var(--accent-2)); color:white}
+    .btn:focus{outline:none; box-shadow:var(--ring)}
+
+    /* Contact */
+    form{display:grid; gap:12px}
+    label{font-weight:600}
+    input, textarea{width:100%; padding:12px 14px; border-radius:12px; border:1px solid #2a2e3d; background:#0b1020; color:var(--text)}
+    input:focus, textarea:focus{outline:none; box-shadow:var(--ring); border-color:#4c4f61}
+
+    /* Footer */
+    footer{padding:30px 0 56px; color:var(--muted)}
+
+    /* Utilities */
+    .muted{color:var(--muted)}
+    .center{text-align:center}
+
+    /* Responsive */
+    @media (max-width: 900px){
+      .hero-inner{grid-template-columns:1fr}
+      .features, .pricing{grid-template-columns:1fr}
+      .kpis{grid-template-columns:1fr 1fr}
+      .menu{display:none}
+      .hamburger{display:inline-flex}
+      .menu.open{display:flex; flex-direction:column; position:absolute; right:20px; top:64px; background:#0b1020; border:1px solid #2a2e3d; padding:12px; border-radius:12px}
+    }
+  </style>
+</head>
+<body>
+  <a href="#main" class="muted" style="position:absolute;left:-9999px;top:auto">Skip to content</a>
+  <header>
+    <div class="container nav">
+      <div class="brand" aria-label="Brand">
+        <div class="logo" aria-hidden="true"></div>
+        <span>Sample App</span>
+      </div>
+      <nav aria-label="Main navigation">
+        <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">☰</button>
+        <div class="menu" id="menu">
+          <a href="#features">Features</a>
+          <a href="#pricing">Pricing</a>
+          <a href="#contact">Contact</a>
+          <a class="cta" href="#get-started">Get Started</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="container">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-inner">
+        <div>
+          <h1>Build, ship, and scale — faster.</h1>
+          <p class="lead">A minimal, production‑ready landing page you can use for hackathons, demos, or your next big idea. Accessible, responsive, and easy to customize.</p>
+          <div style="margin-top:18px">
+            <a class="btn primary" href="#get-started">Start free</a>
+            <a class="btn" href="#features">Explore features</a>
+          </div>
+        </div>
+        <div class="hero-card" role="img" aria-label="Product preview card">
+          <div class="badge">Preview</div>
+          <h3 style="margin:10px 0 4px">Analytics at a glance</h3>
+          <p class="muted" style="margin-top:0">Zero-config dashboards with real-time insights.</p>
+          <div class="kpis">
+            <div class="kpi"><span class="muted">Active users</span><strong>12,438</strong></div>
+            <div class="kpi"><span class="muted">Uptime</span><strong>99.98%</strong></div>
+            <div class="kpi"><span class="muted">Latency</span><strong>42ms</strong></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section id="features">
+      <h2 class="section-title center">Everything you need</h2>
+      <p class="section-sub center">Drop-in sections, clean styles, and sensible defaults.</p>
+      <div class="grid features">
+        <article class="card">
+          <h3>Fast by default</h3>
+          <p class="muted">Hand-tuned CSS with no frameworks keeps this template lightweight and snappy.</p>
+        </article>
+        <article class="card">
+          <h3>Accessible</h3>
+          <p class="muted">Semantic HTML, focus styles, and keyboard-friendly interactions out of the box.</p>
+        </article>
+        <article class="card">
+          <h3>Responsive</h3>
+          <p class="muted">Looks great on phones, tablets, and desktops with a simple grid and fluid type.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- PRICING -->
+    <section id="pricing">
+      <h2 class="section-title center">Simple pricing</h2>
+      <p class="section-sub center">Start free. Upgrade when you grow.</p>
+      <div class="grid pricing">
+        <article class="card">
+          <h3>Hobby</h3>
+          <p class="muted">For personal projects</p>
+          <p class="price">$0</p>
+          <ul class="muted">
+            <li>1 project</li>
+            <li>Community support</li>
+          </ul>
+          <a class="btn" href="#get-started">Choose</a>
+        </article>
+        <article class="card" style="border-color:#6340ff">
+          <h3>Pro</h3>
+          <p class="muted">Best for teams</p>
+          <p class="price">$19</p>
+          <ul class="muted">
+            <li>Unlimited projects</li>
+            <li>Email support</li>
+            <li>Analytics</li>
+          </ul>
+          <a class="btn primary" href="#get-started">Choose</a>
+        </article>
+        <article class="card">
+          <h3>Enterprise</h3>
+          <p class="muted">Scale with confidence</p>
+          <p class="price">Custom</p>
+          <ul class="muted">
+            <li>SSO/SAML</li>
+            <li>Dedicated support</li>
+          </ul>
+          <a class="btn" href="#contact">Talk to sales</a>
+        </article>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <h2 class="section-title center">Get in touch</h2>
+      <p class="section-sub center">Questions, feedback, or partnership ideas? We’d love to hear from you.</p>
+      <div class="card" style="max-width:720px; margin:0 auto">
+        <form onsubmit="event.preventDefault(); alert('Thanks! We\'ll be in touch.');">
+          <div>
+            <label for="name">Name</label>
+            <input id="name" name="name" placeholder="Your name" required />
+          </div>
+          <div>
+            <label for="email">Email</label>
+            <input id="email" type="email" name="email" placeholder="name@example.com" required />
+          </div>
+          <div>
+            <label for="msg">Message</label>
+            <textarea id="msg" name="message" rows="4" placeholder="How can we help?" required></textarea>
+          </div>
+          <button class="btn primary" type="submit">Send message</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <hr style="border:0; border-top:1px solid #2a2e3d; margin:0 0 16px">
+      <div style="display:flex; justify-content:space-between; gap:16px; flex-wrap:wrap">
+        <span class="muted">© <span id="year"></span> Sample App. All rights reserved.</span>
+        <div style="display:flex; gap:14px">
+          <a href="#" class="muted">Privacy</a>
+          <a href="#" class="muted">Terms</a>
+          <a href="#" class="muted">Docs</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile menu toggle
+    const btn = document.querySelector('.hamburger');
+    const menu = document.getElementById('menu');
+    btn?.addEventListener('click', () => {
+      const open = menu.classList.toggle('open');
+      btn.setAttribute('aria-expanded', String(open));
+    });
+    // Footer year
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
