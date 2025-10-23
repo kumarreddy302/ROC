@@ -170,7 +170,115 @@ li {
   transform: translateY(-50%);
 }
 
+/* ===== HERO SECTION STYLES ===== */
+
+/* Define the fade-in-up animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-section {
+  background-image: url('pexels-lara-jameson-8828455.jpg');
+  background-size: cover;
+  background-position: center center;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden; /* Ensure content doesn't bleed during animation */
+}
+
+.hero-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); 
+  z-index: 1; 
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  color: #ffffff;
+  text-align: center;
+  max-width: 800px;
+  padding: 0 20px;
+  /* BUG FIX: 
+    The opacity:0 was here, making the whole container invisible. 
+    It has been moved to the elements below.
+  */
+}
+
+/* Apply animations with delays for sequential appearance */
+.hero-section h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  
+  /* BUG FIX: Add initial invisible state */
+  opacity: 0;
+  transform: translateY(20px);
+  
+  animation: fadeInUp 0.8s ease-out forwards;
+  animation-delay: 0.2s;
+}
+
+.hero-tagline {
+  font-size: 1.25rem;
+  font-weight: 300;
+  margin-bottom: 30px;
+
+  /* BUG FIX: Add initial invisible state */
+  opacity: 0;
+  transform: translateY(20px);
+  
+  animation: fadeInUp 0.8s ease-out forwards;
+  animation-delay: 0.5s;
+}
+
+.cta-button {
+  display: inline-block;
+  background-color: #d9534f; 
+  color: #ffffff;
+  padding: 12px 30px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  border: 2px solid #d9534f;
+  
+  /* BUG FIX: Add initial invisible state */
+  opacity: 0;
+  transform: translateY(20px);
+
+  animation: fadeInUp 0.8s ease-out forwards;
+  animation-delay: 0.8s;
+}
+
+.cta-button:hover {
+  background-color: #c9302c;
+  border-color: #c9302c;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
 /* ===== MOBILE RESPONSIVE STYLES ===== */
+
 @media (max-width: 992px) {
   .main-header {
     /* Logo and hamburger are positioned by .logo and .hamburger */
@@ -273,7 +381,7 @@ li {
     width: 100%;
     box-shadow: none;
     border-top: none;
-    background-color: #f9f9f9;
+    background-color: #f9f9ff;
   }
   
   .dropdown-content.active-dropdown {
@@ -284,3 +392,20 @@ li {
     padding-left: 10%;
   }
 }
+
+/* --- Mobile Responsive for Hero --- */
+@media (max-width: 768px) {
+  .hero-section {
+    height: 70vh;
+  }
+
+  .hero-section h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero-tagline {
+    font-size: 1rem;
+  }
+}
+
+
