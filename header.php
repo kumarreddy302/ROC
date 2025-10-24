@@ -68,7 +68,7 @@
             <li class="dropdown">
               <a href="#" class="drop-btn">Training ▾</a>
               <div class="dropdown-content">
-                <a href="#">IELTS</a>
+                <a href="ielts.php">IELTS</a>
                 <a href="#">TOEFL</a>
                 <a href="#">GRE</a>
               </div>

@@ -1353,3 +1353,196 @@ li {
     margin-right: auto; /* Center logo */
   }
 }
+
+/* ===== IELTS PAGE STYLES (Modernized) ===== */
+
+/* --- Page Banner --- */
+.page-banner {
+  /* Subtle Gradient Background */
+  background: linear-gradient(135deg, #0A4F8B 0%, #084173 100%); 
+  color: #ffffff;
+  padding: 60px 5% 50px; /* Increased padding */
+  text-align: center;
+  position: relative; /* For potential pseudo-elements */
+  overflow: hidden; /* Contain pseudo-elements */
+}
+
+/* Optional: Subtle background pattern */
+/*
+.page-banner::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"%3E%3Cg fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.05"%3E%3Cpath opacity=".5" d="M96 95h4v1h-4v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9zm-1 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9z"/%3E%3Cpath d="M6 5V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9zm-1 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');
+}
+*/
+
+.page-banner h1 {
+  font-size: 2.8rem; /* Larger */
+  margin-bottom: 15px;
+  font-weight: 800; /* Bolder */
+  letter-spacing: -0.5px;
+}
+
+.page-banner p {
+  font-size: 1.2rem;
+  opacity: 0.85; /* Slightly less transparent */
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* --- Content Sections --- */
+.content-container {
+    max-width: 900px; 
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.ielts-about-section,
+.ielts-training-section {
+  padding: 80px 5%; /* Consistent section padding */
+}
+
+/* Updated alternating background colors */
+.ielts-about-section {
+  background-color: #ffffff;
+}
+.ielts-training-section {
+   background-color: #f7fafc; /* Use the lighter grey/blue */
+}
+
+/* Section Headings */
+.ielts-about-section h2,
+.ielts-training-section h2 {
+  font-size: 2.2rem; /* Adjusted size */
+  color: #0A4F8B; /* Logo Blue */
+  margin-bottom: 35px; /* More space below heading */
+  text-align: center;
+  position: relative;
+  padding-bottom: 15px;
+}
+/* Underline effect for content headings */
+.ielts-about-section h2::after,
+.ielts-training-section h2::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0;
+  background-color: #d9534f; /* Logo Red */
+  height: 3px;
+  width: 70px; /* Wider underline */
+  border-radius: 1px;
+}
+
+
+.ielts-about-section p,
+.ielts-training-section p {
+  font-size: 1.05rem; /* Slightly larger text */
+  color: #4a5568; /* Modern grey */
+  line-height: 1.8;
+  margin-bottom: 25px; /* Increased paragraph spacing */
+}
+
+/* Modern List Styling */
+.ielts-about-section ul,
+.ielts-training-section ul {
+  list-style: none; /* Remove default bullets */
+  padding-left: 0; /* Remove default padding */
+  margin-bottom: 30px;
+}
+
+.ielts-about-section ul li,
+.ielts-training-section ul li {
+  margin-bottom: 15px;
+  padding-left: 25px; /* Indentation for custom bullet */
+  position: relative;
+  font-size: 1rem;
+  color: #4a5568;
+}
+
+/* Custom Bullet Points */
+.ielts-about-section ul li::before,
+.ielts-training-section ul li::before {
+  content: '✓'; /* Checkmark icon */
+  position: absolute;
+  left: 0;
+  top: 1px; /* Adjust vertical alignment */
+  color: #d9534f; /* Logo Red */
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+.ielts-about-section ul strong,
+.ielts-training-section ul strong {
+  color: #1a202c; /* Darker heading color for emphasis */
+  font-weight: 600;
+}
+
+/* --- Call to Action Section --- */
+.cta-section {
+    background-color: #e2e8f0; /* Lighter, cooler grey */
+    padding: 60px 5%;
+    text-align: center;
+    border-top: 1px solid #cbd5e0; /* Subtle top border */
+    border-bottom: 1px solid #cbd5e0; /* Subtle bottom border */
+}
+
+.cta-section h2 {
+    font-size: 2rem;
+    color: #0A4F8B;
+    margin-bottom: 15px;
+}
+
+.cta-section p {
+    font-size: 1.15rem;
+    color: #4a5568;
+    margin-bottom: 35px;
+    max-width: 650px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.8;
+}
+
+.cta-button-alt { /* Uses global modern button styles */
+  /* Most styles inherited from .cta-button */
+  padding: 14px 35px; /* Make it consistent with hero CTA */
+  font-size: 1rem;
+}
+
+/* --- Responsive for IELTS Page --- */
+@media (max-width: 992px) {
+    .ielts-about-section h2,
+    .ielts-training-section h2,
+    .cta-section h2 {
+        font-size: 2rem;
+    }
+}
+
+
+@media (max-width: 768px) {
+  .page-banner { padding: 50px 5% 40px; }
+  .page-banner h1 { font-size: 2.2rem; }
+  .page-banner p { font-size: 1.1rem; }
+  
+  .ielts-about-section,
+  .ielts-training-section {
+    padding: 60px 5%;
+  }
+
+  .ielts-about-section h2,
+  .ielts-training-section h2,
+  .cta-section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+  }
+  
+  .ielts-about-section p,
+  .ielts-training-section p,
+  .cta-section p {
+    font-size: 1rem;
+  }
+}
