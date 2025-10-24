@@ -1204,55 +1204,57 @@ li {
   }
 }
 
-
-/* ===== FOOTER SECTION STYLES ===== */
+/* ===== FOOTER SECTION STYLES (Enhanced) ===== */
 
 .site-footer {
-  background-color: #0A4F8B; /* Logo Blue */
-  color: #e0e0e0; /* Light grey text */
-  padding: 50px 0 0; /* Padding top, no bottom padding yet */
+  background-color: #0A4F8B; /* Main Logo Blue */
+  color: rgba(255, 255, 255, 0.7); /* Lighter text (70% white) */
+  padding: 60px 0 0; /* Increased top padding */
   font-size: 0.95rem;
+  line-height: 1.8; /* Slightly more line spacing */
 }
 
 .footer-container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 columns */
-  gap: 40px; /* Space between columns */
-  padding-bottom: 40px; /* Space above bottom bar */
+  grid-template-columns: 1.2fr 0.8fr 1fr; /* Adjusted column ratios: About, Links, Contact */
+  gap: 50px; /* Increased gap */
+  padding-bottom: 50px; 
 }
 
 .footer-col h4 {
-  color: #ffffff; /* White headings */
-  font-size: 1.2rem;
+  color: #ffffff; 
+  font-size: 1.3rem; /* Slightly larger heading */
   font-weight: 600;
-  margin-bottom: 20px;
+  margin-bottom: 25px; /* Increased margin */
   position: relative;
-  padding-bottom: 10px;
+  padding-bottom: 12px;
 }
 
-/* Underline effect for headings */
+/* More prominent underline effect */
 .footer-col h4::after {
   content: '';
   position: absolute;
   left: 0;
   bottom: 0;
   background-color: #d9534f; /* Logo Red */
-  height: 2px;
-  width: 50px; /* Width of underline */
+  height: 3px; /* Thicker underline */
+  width: 60px; /* Wider underline */
+  border-radius: 1px; /* Slightly rounded ends */
 }
 
 .footer-logo {
-  max-width: 150px; /* Control logo size in footer */
+  max-width: 160px; /* Slightly larger logo */
   height: auto;
-  margin-bottom: 15px;
-  background: white; /* Add white background if logo is transparent */
-  padding: 5px;
-  border-radius: 5px;
+  margin-bottom: 20px;
+  background: white; 
+  padding: 8px; /* More padding */
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Subtle shadow */
 }
 
 .footer-col p {
-  line-height: 1.7;
-  color: #ccc; /* Slightly lighter than main text */
+  color: rgba(255, 255, 255, 0.7); /* Match main footer text opacity */
+  margin-bottom: 15px; /* Add margin below paragraphs */
 }
 
 .footer-col ul {
@@ -1261,52 +1263,86 @@ li {
 }
 
 .footer-col ul li {
-  margin-bottom: 10px;
+  margin-bottom: 12px; /* Increased spacing */
 }
 
+/* Enhanced link style */
 .footer-col ul li a {
-  color: #e0e0e0;
+  color: rgba(255, 255, 255, 0.7);
   text-decoration: none;
   transition: color 0.3s ease, padding-left 0.3s ease;
+  position: relative; /* For potential icon or underline effect */
+}
+/* Underline appears on hover */
+.footer-col ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 1px;
+    display: block;
+    margin-top: 2px;
+    right: 0;
+    background: #d9534f; /* Logo Red */
+    transition: width .3s ease;
+    -webkit-transition: width .3s ease;
 }
 
 .footer-col ul li a:hover {
-  color: #ffffff; /* White on hover */
-  padding-left: 5px; /* Slight indent on hover */
+  color: #ffffff; 
+  padding-left: 0; /* Keep alignment */
 }
+.footer-col ul li a:hover::after {
+    width: 100%;
+    left: 0;
+    background: #d9534f; /* Logo Red */
+}
+
 
 .footer-col address {
   font-style: normal;
-  line-height: 1.7;
-  margin-bottom: 15px;
-  color: #ccc;
+  line-height: 1.8;
+  margin-bottom: 20px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.footer-col .contact-info strong {
+  color: rgba(255, 255, 255, 0.85); /* Slightly brighter label */
 }
 
 .footer-col .contact-info a {
-  color: #e0e0e0;
+  color: rgba(255, 255, 255, 0.7);
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
 .footer-col .contact-info a:hover {
-  color: #ffffff;
+  color: #ffffff; /* White on hover */
 }
 
 .footer-bottom {
-  background-color: #084173; /* Slightly darker blue */
-  padding: 15px 0;
+  background-color: #084173; /* Darker blue */
+  padding: 20px 0; /* Increased padding */
   text-align: center;
   font-size: 0.9rem;
-  color: #aaa;
-  margin-top: 40px; /* Space above the bottom bar, adjust if needed */
+  color: rgba(255, 255, 255, 0.5); /* Dimmed copyright text */
+  margin-top: 0; /* Remove top margin, handled by container padding */
+  border-top: 1px solid rgba(255, 255, 255, 0.1); /* Subtle top border */
 }
 
 /* --- Mobile Responsive for Footer --- */
+
+@media (max-width: 992px) {
+   .footer-container {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on tablet */
+  }
+}
+
 
 @media (max-width: 768px) {
   .footer-container {
     grid-template-columns: 1fr; /* Stack columns */
     text-align: center; /* Center text in columns */
+    gap: 30px; /* Adjust gap for stacked layout */
   }
   .footer-col h4::after {
     left: 50%; /* Center the underline */
