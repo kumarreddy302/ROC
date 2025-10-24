@@ -1546,3 +1546,196 @@ li {
     font-size: 1rem;
   }
 }
+
+
+
+/* ===== TOEFL PAGE STYLES ===== */
+
+/* --- Banner --- */
+/* Uses the existing .page-banner style */
+
+/* --- Content Sections --- */
+/* Uses the existing .content-container style */
+
+.toefl-about-section, /* New class name */
+.toefl-training-section { /* New class name */
+  padding: 80px 5%; /* Consistent section padding */
+}
+
+/* Alternate background colors (following pattern) */
+.toefl-about-section {
+  background-color: #f7fafc; /* Light grey/blue */
+}
+.toefl-training-section {
+   background-color: #ffffff; /* White */
+}
+
+/* Reusing heading style */
+.toefl-about-section h2,
+.toefl-training-section h2 {
+  font-size: 2.2rem;
+  color: #0A4F8B; /* Logo Blue */
+  margin-bottom: 35px;
+  text-align: center;
+  position: relative;
+  padding-bottom: 15px;
+}
+.toefl-about-section h2::after,
+.toefl-training-section h2::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0;
+  background-color: #d9534f; /* Logo Red */
+  height: 3px;
+  width: 70px;
+  border-radius: 1px;
+}
+
+/* Reusing paragraph style */
+.toefl-about-section p,
+.toefl-training-section p {
+  font-size: 1.05rem;
+  color: #4a5568;
+  line-height: 1.8;
+  margin-bottom: 25px;
+}
+
+/* Reusing list style */
+.toefl-about-section ul,
+.toefl-training-section ul {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 30px;
+}
+
+.toefl-about-section ul li,
+.toefl-training-section ul li {
+  margin-bottom: 15px;
+  padding-left: 25px;
+  position: relative;
+  font-size: 1rem;
+  color: #4a5568;
+}
+
+.toefl-about-section ul li::before,
+.toefl-training-section ul li::before {
+  content: '✓'; /* Checkmark icon */
+  position: absolute;
+  left: 0;
+  top: 1px;
+  color: #d9534f; /* Logo Red */
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+.toefl-about-section ul strong,
+.toefl-training-section ul strong {
+  color: #1a202c;
+  font-weight: 600;
+}
+
+/* --- Call to Action Section --- */
+/* Uses the existing .cta-section style */
+
+
+/* --- Responsive for TOEFL Page --- */
+/* Uses existing responsive rules for .page-banner, h2 etc. defined in IELTS section */
+/* Add specific overrides if needed */
+
+
+
+/* ===== GRE PAGE STYLES ===== */
+
+/* --- Banner --- */
+/* Uses the existing .page-banner style */
+
+/* --- Content Sections --- */
+/* Uses the existing .content-container style */
+
+.gre-about-section, /* New class name */
+.gre-training-section { /* New class name */
+  padding: 80px 5%; /* Consistent section padding */
+}
+
+/* Alternate background colors (following pattern) */
+.gre-about-section {
+  background-color: #ffffff; /* White */
+}
+.gre-training-section {
+   background-color: #f7fafc; /* Light grey/blue */
+}
+
+/* Reusing heading style */
+.gre-about-section h2,
+.gre-training-section h2 {
+  font-size: 2.2rem;
+  color: #0A4F8B; /* Logo Blue */
+  margin-bottom: 35px;
+  text-align: center;
+  position: relative;
+  padding-bottom: 15px;
+}
+.gre-about-section h2::after,
+.gre-training-section h2::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0;
+  background-color: #d9534f; /* Logo Red */
+  height: 3px;
+  width: 70px;
+  border-radius: 1px;
+}
+
+/* Reusing paragraph style */
+.gre-about-section p,
+.gre-training-section p {
+  font-size: 1.05rem;
+  color: #4a5568;
+  line-height: 1.8;
+  margin-bottom: 25px;
+}
+
+/* Reusing list style */
+.gre-about-section ul,
+.gre-training-section ul {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 30px;
+}
+
+.gre-about-section ul li,
+.gre-training-section ul li {
+  margin-bottom: 15px;
+  padding-left: 25px;
+  position: relative;
+  font-size: 1rem;
+  color: #4a5568;
+}
+
+.gre-about-section ul li::before,
+.gre-training-section ul li::before {
+  content: '✓'; /* Checkmark icon */
+  position: absolute;
+  left: 0;
+  top: 1px;
+  color: #d9534f; /* Logo Red */
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+.gre-about-section ul strong,
+.gre-training-section ul strong {
+  color: #1a202c;
+  font-weight: 600;
+}
+
+/* --- Call to Action Section --- */
+/* Uses the existing .cta-section style */
+
+
+/* --- Responsive for GRE Page --- */
+/* Uses existing responsive rules for .page-banner, h2 etc. defined earlier */

@@ -69,8 +69,8 @@
               <a href="#" class="drop-btn">Training ▾</a>
               <div class="dropdown-content">
                 <a href="ielts.php">IELTS</a>
-                <a href="#">TOEFL</a>
-                <a href="#">GRE</a>
+                <a href="toefl.php">TOEFL</a>
+                <a href="gre.php">GRE</a>
               </div>
             </li>
             <li><a href="#">Our Events</a></li>
