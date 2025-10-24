@@ -3,7 +3,7 @@
 <main>
   <section class="hero-section">
     <div class="hero-content">
-      <h1>Find Your Future Abroads</h1>
+      <h1>Find Your Future Abroad Kumar</h1>
       <p class="hero-tagline">Your dream of international education starts here. Let us guide you every step of the way.</p>
       <a href="#services" class="cta-button">Explore Services</a>
     </div>
