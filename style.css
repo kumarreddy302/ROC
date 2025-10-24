@@ -353,8 +353,294 @@ li {
   object-fit: cover; /* Cover the area, cropping if needed */
 }
 
+/* ===== TESTS & TRAININGS SECTION STYLES (Updated Layout) ===== */
+
+.tests-section {
+  padding: 60px 5%;
+  background-color: #ffffff; /* White background */
+  text-align: center; /* Center align all content within the section */
+}
+
+.tests-container {
+ /* Removed display: flex and related properties */
+}
+
+.tests-text {
+  max-width: 700px; /* Limit width for better readability when centered */
+  margin: 0 auto 40px auto; /* Center the text block and add bottom margin */
+}
+
+.tests-text h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #0A4F8B; /* Logo Blue */
+  margin-bottom: 15px;
+}
+
+.tests-text p {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.7;
+}
+
+.tests-logos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 logos per row */
+  gap: 30px; /* Space between logos */
+  max-width: 600px; /* Control the max width of the logo grid */
+  margin: 0 auto; /* Center the logo grid */
+  justify-items: center;
+}
+
+.logo-circle {
+  width: 140px; /* Slightly larger circles */
+  height: 140px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  border: 2px solid #eee; /* Add a subtle border */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer; /* Add pointer cursor */
+  transition: background-color 0.4s ease, color 0.4s ease, transform 0.3s ease, box-shadow 0.3s ease, border-color 0.4s ease;
+}
+
+.logo-circle span { /* Style for text logos */
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #555; /* Default text color */
+  transition: color 0.4s ease; /* Smooth text color transition */
+}
+
+.logo-circle:hover {
+  background-color: #d9534f; /* Your Logo Red for fill */
+  transform: translateY(-5px); /* Lift effect */
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.12);
+  border-color: #d9534f; /* Match border to fill */
+}
+
+.logo-circle:hover span {
+  color: #ffffff; /* Change text to white on hover */
+}
+
+/* ===== STORY IN NUMBERS SECTION STYLES ===== */
+
+.story-numbers {
+  padding: 60px 5% 80px; 
+  background-color: #f0f4f8; /* Light grey/blue background */
+  text-align: center;
+}
+
+.story-numbers h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #0A4F8B; /* Logo Blue */
+  margin-bottom: 50px; 
+}
+
+.numbers-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); 
+  gap: 25px; 
+}
+
+.number-card {
+  background-color: #ffffff;
+  border: 1px solid #dce3e9; 
+  border-radius: 12px; 
+  padding: 35px 20px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.07);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative; 
+}
+
+.number-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
+}
+
+.number-card .number {
+  display: block; 
+  font-size: 2.8rem; 
+  font-weight: 700;
+  margin-bottom: 8px;
+  line-height: 1.2;
+  min-height: 48px; /* Added min-height to prevent jump */
+}
+
+.number-card .number.color-red {
+  color: #d9534f; /* Your Logo Red */
+}
+.number-card .number.color-blue {
+  color: #0A4F8B; /* Your Logo Blue */
+}
+
+
+.number-card .description {
+  display: block; 
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.5;
+}
+
+/* ===== TEAM SECTION STYLES ===== */ /* Correct Order */
+
+.team-section {
+  padding: 60px 5%;
+  background-color: #ffffff; /* UPDATED TO WHITE */
+  text-align: center;
+}
+
+.team-section h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #0A4F8B; /* Logo Blue */
+  margin-bottom: 10px;
+}
+
+/* Using existing .section-tagline style */
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 columns on desktop */
+  gap: 30px;
+  margin-top: 50px; /* Space below title/tagline */
+}
+
+.team-card {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  border: 1px solid #eee; /* Added subtle border */
+  overflow: hidden; /* Ensure image corners are rounded */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center; /* Center content within card */
+}
+
+.team-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
+}
+
+.team-image img {
+  display: block;
+  width: 100%;
+  height: 250px; /* Adjust height as needed */
+  object-fit: cover; /* Cover the area, cropping if needed */
+}
+
+.team-info {
+  padding: 20px 15px;
+}
+
+.team-name {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.team-title {
+  font-size: 0.95rem;
+  color: #d9534f; /* Logo Red for title */
+  display: block; /* Ensure it takes its own line */
+}
+
+
+/* ===== TESTIMONIALS SECTION STYLES ===== */ /* Correct Order */
+
+.testimonials-section {
+  padding: 60px 5%;
+  background-color: #f0f4f8; /* UPDATED TO LIGHT GREY/BLUE */
+  text-align: center;
+}
+
+.testimonials-section h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #0A4F8B; /* Logo Blue */
+  margin-bottom: 10px;
+}
+
+/* Using existing .section-tagline style */
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns on desktop */
+  gap: 30px;
+  margin-top: 50px; /* Space below title/tagline */
+}
+
+.testimonial-card {
+  background-color: #ffffff; /* UPDATED TO WHITE card background */
+  border: 1px solid #e9ecef; /* Subtle border */
+  border-radius: 10px;
+  padding: 30px;
+  text-align: left; /* Text inside card is left-aligned */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  position: relative; /* For quote icon positioning */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial-card .stars {
+  font-size: 1.3rem;
+  color: #f39c12; /* Gold color for stars */
+  margin-bottom: 15px;
+}
+
+.testimonial-card .quote {
+  font-size: 1rem;
+  font-style: italic;
+  color: #555;
+  line-height: 1.7;
+  margin-bottom: 20px;
+  position: relative; /* Context for quote icon */
+  padding-left: 10px; /* Space for quote icon */
+}
+
+.testimonial-card .author {
+  margin-top: auto; /* Push author to the bottom if using flex */
+}
+
+.testimonial-card .author-name {
+  display: block;
+  font-weight: 600;
+  color: #0A4F8B; /* Logo Blue for name */
+  font-size: 1.1rem;
+}
+
+.testimonial-card .author-detail {
+  display: block;
+  font-size: 0.9rem;
+  color: #777;
+}
+
+.testimonial-card .quote-icon {
+    position: absolute;
+    top: -5px;
+    right: 20px;
+    font-size: 4rem;
+    color: rgba(10, 79, 139, 0.1); /* Transparent Logo Blue */
+    line-height: 1;
+    z-index: 1; /* Behind text potentially */
+    user-select: none; /* Make it non-selectable */
+}
+
 
 /* ===== MOBILE RESPONSIVE STYLES ===== */
+
+@media (max-width: 1100px) { 
+  .numbers-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
 
 @media (max-width: 992px) {
   /* --- Header --- */
@@ -367,30 +653,29 @@ li {
   }
 
   .nav-wrapper {
-    position: fixed; /* Changed to fixed for better mobile experience */
+    position: fixed; 
     top: 0;
-    left: 0; /* Start hidden off-screen */
-    width: 80%; /* Don't take full width */
-    max-width: 350px; /* Max width */
+    left: 0; 
+    width: 80%; 
+    max-width: 350px; 
     height: 100vh;
     background-color: #ffffff;
-    padding-top: 60px; /* Space for header */
-    transform: translateX(-100%); /* Start hidden to the left */
+    padding-top: 60px; 
+    transform: translateX(-100%); 
     opacity: 0;
     transition: transform 0.4s ease-out, opacity 0.4s ease-out;
     overflow-y: auto;
     flex-direction: column;
     justify-content: flex-start;
-    box-shadow: 4px 0px 15px rgba(0,0,0,0.1); /* Add shadow for slide-out */
-    z-index: 1001; /* Below hamburger */
+    box-shadow: 4px 0px 15px rgba(0,0,0,0.1); 
+    z-index: 1001; 
   }
   
   .nav-wrapper.nav-active {
-    transform: translateX(0); /* Slide in */
+    transform: translateX(0); 
     opacity: 1;
   }
   
-   /* Add overlay when nav is active */
   body.nav-open::after {
     content: '';
     position: fixed;
@@ -399,7 +684,7 @@ li {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
-    z-index: 1000; /* Below nav wrapper */
+    z-index: 1000; 
   }
 
 
@@ -426,7 +711,7 @@ li {
     width: 100%;
   }
 
-  .register-btn { /* Make register btn full width in mobile nav */
+  .register-btn { 
     width: 100%;
     text-align: center;
     padding: 12px;
@@ -486,6 +771,21 @@ li {
   .services-grid {
     grid-template-columns: repeat(2, 1fr); 
   }
+  
+  /* --- Tests --- */
+   .tests-text h2 {
+    font-size: 2.2rem;
+  }
+  
+  /* --- Team --- */ 
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr); 
+  }
+  
+  /* --- Testimonials --- */ 
+  .testimonials-grid {
+    grid-template-columns: repeat(2, 1fr); 
+  }
 }
 
 @media (max-width: 768px) {
@@ -506,11 +806,514 @@ li {
   .services-section h2 {
     font-size: 2rem;
   }
+  
+  /* --- Tests --- */
+  .tests-logos {
+     max-width: 450px; /* Adjust grid width for tablet */
+     gap: 25px;
+   }
+   .logo-circle {
+      width: 120px;
+      height: 120px;
+   }
+   .logo-circle span {
+      font-size: 1.4rem;
+   }
+   
+   /* --- Numbers --- */
+  .story-numbers h2 {
+    font-size: 2rem;
+  }
+  .numbers-grid {
+    grid-template-columns: repeat(2, 1fr); 
+  }
+  .number-card .number {
+    font-size: 2.4rem;
+  }
+  .number-card .description {
+    font-size: 0.9rem;
+  }
+  
+  /* --- Team --- */ 
+  .team-section h2 {
+    font-size: 2rem;
+  }
+  
+  /* --- Testimonials --- */ 
+  .testimonials-section h2 {
+    font-size: 2rem;
+  }
 }
+
 
 @media (max-width: 576px) {
    /* --- Services --- */
   .services-grid {
     grid-template-columns: 1fr; /* 1 column on small phones */
+  }
+  
+  /* --- Tests --- */
+   .tests-logos {
+    grid-template-columns: repeat(2, 1fr); /* 2 logos per row on small phones */
+    gap: 20px;
+    max-width: 300px; /* Adjust grid width */
+  }
+
+  .logo-circle {
+    width: 110px; /* Smaller circles on small phones */
+    height: 110px;
+  }
+
+  .logo-circle span {
+    font-size: 1.2rem;
+  }
+  
+  /* --- Numbers --- */
+   .numbers-grid {
+    grid-template-columns: 1fr; 
+    max-width: 300px; 
+    margin: 0 auto; 
+  }
+  
+  /* --- Team --- */ 
+  .team-grid {
+    grid-template-columns: 1fr; 
+    max-width: 300px; 
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  /* --- Testimonials --- */ 
+  .testimonials-grid {
+    grid-template-columns: 1fr; 
+  }
+}
+
+/* ===== NEWS & UPDATES SECTION STYLES ===== */
+
+.news-section {
+  padding: 60px 5%;
+  background-color: #ffffff; /* White background */
+  text-align: center;
+}
+
+.news-section h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #0A4F8B; /* Logo Blue */
+  margin-bottom: 10px;
+}
+
+/* Using existing .section-tagline style */
+
+.news-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns on desktop */
+  gap: 30px;
+  margin-top: 50px; /* Space below title/tagline */
+  text-align: left; /* Align text left within cards */
+}
+
+.news-card {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  border: 1px solid #eee;
+  overflow: hidden; /* Ensure image corners are rounded */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex; /* Flex layout for content arrangement */
+  flex-direction: column; /* Stack image and content vertically */
+}
+
+.news-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+}
+
+.news-image img {
+  display: block;
+  width: 100%;
+  height: 200px; /* Fixed image height */
+  object-fit: cover;
+}
+
+.news-content {
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1; /* Make content area fill available space */
+}
+
+.news-date {
+  display: block;
+  font-size: 0.85rem;
+  color: #777;
+  margin-bottom: 10px;
+}
+
+.news-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 10px;
+  line-height: 1.4;
+}
+
+.news-excerpt {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  flex-grow: 1; /* Push button to the bottom */
+}
+
+.read-more-btn {
+  display: inline-block;
+  align-self: flex-start; /* Align button to the left */
+  background-color: transparent;
+  color: #d9534f; /* Logo Red */
+  border: 2px solid #d9534f; /* Logo Red border */
+  padding: 8px 18px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.read-more-btn:hover {
+  background-color: #d9534f; /* Fill with Logo Red on hover */
+  color: #ffffff; /* White text on hover */
+}
+
+/* --- Mobile Responsive for News --- */
+
+@media (max-width: 992px) {
+  .news-grid {
+     /* 2 columns on tablets */
+    grid-template-columns: repeat(2, 1fr); 
+  }
+}
+
+@media (max-width: 768px) {
+  .news-section h2 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .news-grid {
+     /* 1 column on phones */
+    grid-template-columns: 1fr; 
+  }
+}
+
+/* ===== UNIVERSITY PARTNERS SECTION STYLES ===== */
+
+.university-partners {
+  padding: 60px 5%;
+  background-color: #f0f4f8; /* Light grey/blue background */
+  text-align: center;
+}
+
+.university-partners h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #0A4F8B; /* Logo Blue */
+  margin-bottom: 10px;
+}
+
+/* Using existing .section-tagline style */
+
+.partners-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 columns on desktop */
+  gap: 20px; /* Adjust gap between logos */
+  margin-top: 50px; /* Space below title/tagline */
+  align-items: center; /* Vertically center logos if they have different heights */
+}
+
+.partner-logo {
+  background-color: #ffffff; /* White background for each logo box */
+  padding: 20px; /* Padding around the logo */
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  min-height: 120px; /* Ensure cards have a minimum height */
+  display: flex; /* Center logo inside the box */
+  justify-content: center;
+  align-items: center;
+}
+
+.partner-logo:hover {
+  transform: scale(1.03); /* Slightly enlarge logo box on hover */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.partner-logo img {
+  max-width: 100%; /* Ensure logo fits within the padding */
+  max-height: 70px; /* Limit the height of the logos */
+  height: auto; /* Maintain aspect ratio */
+  display: block; /* Remove extra space below image */
+  object-fit: contain; /* Scale logo down to fit, maintaining aspect ratio */
+}
+
+
+/* --- Mobile Responsive for University Partners --- */
+
+@media (max-width: 992px) {
+  .partners-grid {
+     /* 3 columns on tablets */
+    grid-template-columns: repeat(3, 1fr); 
+  }
+}
+
+@media (max-width: 768px) {
+  .university-partners h2 {
+    font-size: 2rem;
+  }
+  .partners-grid {
+     /* 2 columns on small tablets/large phones */
+    grid-template-columns: repeat(2, 1fr); 
+  }
+}
+
+@media (max-width: 576px) {
+    .partners-grid {
+     /* Optional: Could go to 1 column or stay at 2 */
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 15px; /* Reduce gap */
+  }
+   .partner-logo {
+     padding: 15px; /* Reduce padding */
+     min-height: 100px;
+   }
+   .partner-logo img {
+     max-height: 50px; /* Reduce logo height */
+   }
+}
+
+/* ===== GALLERY SECTION STYLES ===== */
+
+.gallery-section {
+  padding: 60px 5%;
+  background-color: #ffffff; /* White background */
+  text-align: center;
+}
+
+.gallery-section h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #0A4F8B; /* Logo Blue */
+  margin-bottom: 10px;
+}
+
+/* Using existing .section-tagline style */
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns on desktop */
+  gap: 20px; /* Gap between images */
+  margin-top: 50px; /* Space below title/tagline */
+}
+
+.gallery-item {
+  position: relative; /* Needed for overlay positioning */
+  overflow: hidden; /* Keep zoom effect contained */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.gallery-item img {
+  display: block; /* Remove bottom space */
+  width: 100%;
+  height: 250px; /* Fixed height for consistency */
+  object-fit: cover; /* Crop image to fit */
+  transition: transform 0.4s ease-out; /* Smooth zoom transition */
+}
+
+.gallery-item .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(10, 79, 139, 0); /* Start fully transparent - Logo Blue base */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0; /* Hidden initially */
+  transition: background-color 0.4s ease-out, opacity 0.4s ease-out; /* Smooth fade transition */
+  z-index: 1; /* Sit on top of image */
+}
+
+.gallery-item figcaption {
+  color: #ffffff;
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-align: center;
+  padding: 10px;
+  transform: translateY(10px); /* Start slightly lower */
+  opacity: 0; /* Hidden initially */
+  transition: opacity 0.3s ease-out 0.1s, transform 0.3s ease-out 0.1s; /* Delayed fade/slide in */
+}
+
+/* Hover Animation Effects */
+.gallery-item:hover img {
+  transform: scale(1.1); /* Zoom image slightly */
+}
+
+.gallery-item:hover .overlay {
+  background-color: rgba(10, 79, 139, 0.7); /* Fade in semi-transparent Logo Blue */
+  opacity: 1; /* Make overlay visible */
+}
+
+.gallery-item:hover figcaption {
+  opacity: 1; /* Fade in caption */
+  transform: translateY(0); /* Slide caption up */
+}
+
+
+/* --- Mobile Responsive for Gallery --- */
+
+@media (max-width: 992px) {
+  .gallery-grid {
+     /* 2 columns on tablets */
+    grid-template-columns: repeat(2, 1fr); 
+  }
+}
+
+@media (max-width: 768px) {
+  .gallery-section h2 {
+    font-size: 2rem;
+  }
+  .gallery-item img {
+     height: 200px; /* Slightly smaller images on tablet */
+  }
+}
+
+@media (max-width: 576px) {
+  .gallery-grid {
+     /* 1 column on phones */
+    grid-template-columns: 1fr; 
+    gap: 25px; /* Increase gap slightly for single column */
+  }
+   .gallery-item img {
+     height: 220px; /* Adjust height for single column if desired */
+  }
+}
+
+
+/* ===== FOOTER SECTION STYLES ===== */
+
+.site-footer {
+  background-color: #0A4F8B; /* Logo Blue */
+  color: #e0e0e0; /* Light grey text */
+  padding: 50px 0 0; /* Padding top, no bottom padding yet */
+  font-size: 0.95rem;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns */
+  gap: 40px; /* Space between columns */
+  padding-bottom: 40px; /* Space above bottom bar */
+}
+
+.footer-col h4 {
+  color: #ffffff; /* White headings */
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+/* Underline effect for headings */
+.footer-col h4::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-color: #d9534f; /* Logo Red */
+  height: 2px;
+  width: 50px; /* Width of underline */
+}
+
+.footer-logo {
+  max-width: 150px; /* Control logo size in footer */
+  height: auto;
+  margin-bottom: 15px;
+  background: white; /* Add white background if logo is transparent */
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.footer-col p {
+  line-height: 1.7;
+  color: #ccc; /* Slightly lighter than main text */
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-col ul li {
+  margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+  color: #e0e0e0;
+  text-decoration: none;
+  transition: color 0.3s ease, padding-left 0.3s ease;
+}
+
+.footer-col ul li a:hover {
+  color: #ffffff; /* White on hover */
+  padding-left: 5px; /* Slight indent on hover */
+}
+
+.footer-col address {
+  font-style: normal;
+  line-height: 1.7;
+  margin-bottom: 15px;
+  color: #ccc;
+}
+
+.footer-col .contact-info a {
+  color: #e0e0e0;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-col .contact-info a:hover {
+  color: #ffffff;
+}
+
+.footer-bottom {
+  background-color: #084173; /* Slightly darker blue */
+  padding: 15px 0;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #aaa;
+  margin-top: 40px; /* Space above the bottom bar, adjust if needed */
+}
+
+/* --- Mobile Responsive for Footer --- */
+
+@media (max-width: 768px) {
+  .footer-container {
+    grid-template-columns: 1fr; /* Stack columns */
+    text-align: center; /* Center text in columns */
+  }
+  .footer-col h4::after {
+    left: 50%; /* Center the underline */
+    transform: translateX(-50%);
+  }
+  .footer-logo {
+    margin-left: auto;
+    margin-right: auto; /* Center logo */
   }
 }
