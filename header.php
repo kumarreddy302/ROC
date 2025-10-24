@@ -3,22 +3,26 @@
 $current_page = basename($_SERVER['PHP_SELF']);
 $body_classes = ''; // Initialize body classes string
 
-// Add specific class based on page
-// **** APPLY 'page-usa' class to BOTH usa.php AND uk.php ****
-if ($current_page == 'usa.php' || $current_page == 'uk.php') {
-    $body_classes .= ' page-usa page-studyabroad'; // Use the same class for styling consistency
+// Define Study Abroad pages
+$study_abroad_pages = ['usa.php', 'uk.php', 'australia.php', 'canada.php'];
+// Define Training pages
+$training_pages = ['ielts.php', 'toefl.php', 'gre.php'];
+
+// Add body classes based on page type
+if (in_array($current_page, $study_abroad_pages)) {
+    $body_classes .= ' page-usa page-studyabroad'; // Use 'page-usa' for consistent modern styling
+    // Add specific page class if needed later e.g. ' page-australia'
+} elseif (in_array($current_page, $training_pages)) {
+     $body_classes .= ' page-training'; // Add a general class for training pages
+     // Add specific page class if needed later e.g. ' page-ielts'
 }
-// Add more classes for other specific pages if needed later
-// elseif ($current_page == 'ielts.php') {
-//    $body_classes .= ' page-ielts page-training';
-// }
 
 // Trim whitespace just in case
 $body_classes = trim($body_classes);
 
 // Determine active state for parent nav items
-$is_studyabroad_active = ($current_page == 'usa.php' || $current_page == 'uk.php' /* || add other study abroad pages */ );
-$is_training_active = ($current_page == 'ielts.php' || $current_page == 'toefl.php' || $current_page == 'gre.php');
+$is_studyabroad_active = in_array($current_page, $study_abroad_pages);
+$is_training_active = in_array($current_page, $training_pages);
 
 ?>
 <!DOCTYPE html>
@@ -84,9 +88,7 @@ $is_training_active = ($current_page == 'ielts.php' || $current_page == 'toefl.p
               <div class="dropdown-content">
                  <a href="usa.php" class="<?php echo ($current_page == 'usa.php') ? 'active' : ''; ?>">USA</a>
                  <a href="uk.php" class="<?php echo ($current_page == 'uk.php') ? 'active' : ''; ?>">UK</a> 
-                <a href="#">Australia</a>
-                <a href="#">Canada</a>
-              </div>
+                 <a href="australia.php" class="<?php echo ($current_page == 'australia.php') ? 'active' : ''; ?>">Australia</a> <a href="canada.php" class="<?php echo ($current_page == 'canada.php') ? 'active' : ''; ?>">Canada</a> </div>
             </li>
             <li class="dropdown">
                <a href="#" class="drop-btn <?php echo $is_training_active ? 'active' : ''; ?>">Training ▾</a> 

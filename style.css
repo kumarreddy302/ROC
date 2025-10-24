@@ -1740,110 +1740,160 @@ li {
 /* Uses existing responsive rules for .page-banner, h2 etc. defined earlier */
 
 
+/* ===== ADD SCOPED MODERN USA STYLES BELOW ===== */
 
+/* ... (Keep .page-usa font and global styles) ... */
 
-/* ===== USA PAGE STYLES ===== */
-
-/* --- USA Banner (Slight variation) --- */
-.usa-banner {
-  /* Inherits from .page-banner but we can override */
-  padding: 70px 5% 60px; /* Slightly different padding */
-  /* Optional: Add a subtle USA-themed background pattern/image */
-   /* background-image: linear-gradient(rgba(10, 79, 139, 0.85), rgba(8, 65, 115, 0.85)), url('path/to/usa-bg.jpg'); */
-   /* background-size: cover; */
-   /* background-position: center; */
+/* --- USA/UK/AUS/CAN Page Specific Section Styles (Modern) --- */
+.page-usa .usa-banner, 
+.page-usa .uk-banner,
+.page-usa .australia-banner, /* <<< ADDED */
+.page-usa .canada-banner { /* <<< ADDED */
+  background: linear-gradient(135deg, #0A4F8B 0%, #084173 100%);
+  color: #ffffff;
+  padding: 70px 5% 60px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
 }
-.usa-banner h1 { font-size: 3rem; } /* Slightly larger */
-
-
-/* --- Content Sections (Different BG pattern) --- */
-/* Uses existing .content-container style */
-
-.usa-why-section,
-.usa-system-section,
-.usa-application-section {
-  padding: 80px 5%;
+.page-usa .usa-banner h1,
+.page-usa .uk-banner h1,
+.page-usa .australia-banner h1, /* <<< ADDED */
+.page-usa .canada-banner h1 { /* <<< ADDED */
+  font-size: 3rem;
+  color: #ffffff;
+  margin-bottom: 15px;
+}
+.page-usa .usa-banner p,
+.page-usa .uk-banner p,
+.page-usa .australia-banner p, /* <<< ADDED */
+.page-usa .canada-banner p { /* <<< ADDED */
+  font-size: 1.2rem;
+  color: #ffffff;
+  opacity: 0.9;
+  max-width: 600px;
+  margin: 0 auto;
 }
 
-/* New background pattern for USA page */
-.usa-why-section { background-color: #ffffff; }
-.usa-system-section { background-color: #f0f4f8; } /* Light grey/blue */
-.usa-application-section { background-color: #ffffff; }
+.page-usa .content-container { 
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
 
-/* Section Headings (Slight variation - no underline) */
-.usa-why-section h2,
-.usa-system-section h2,
-.usa-application-section h2 {
+/* Background colors for Study Abroad pages */
+.page-usa .usa-why-section,
+.page-usa .uk-why-section,
+.page-usa .australia-why-section, /* <<< ADDED */
+.page-usa .canada-why-section, /* <<< ADDED */
+.page-usa .usa-application-section,
+.page-usa .uk-application-section,
+.page-usa .australia-application-section, /* <<< ADDED */
+.page-usa .canada-application-section { /* <<< ADDED */
+    background-color: #ffffff; 
+}
+
+.page-usa .usa-system-section,
+.page-usa .uk-system-section,
+.page-usa .australia-system-section, /* <<< ADDED */
+.page-usa .canada-system-section { /* <<< ADDED */
+    background-color: #f7fafc; 
+}
+
+
+/* Section Headings */
+.page-usa .usa-why-section h2,
+.page-usa .usa-system-section h2,
+.page-usa .usa-application-section h2,
+.page-usa .uk-why-section h2,    
+.page-usa .uk-system-section h2, 
+.page-usa .uk-application-section h2,
+.page-usa .australia-why-section h2, /* <<< ADDED */
+.page-usa .australia-system-section h2, /* <<< ADDED */
+.page-usa .australia-application-section h2, /* <<< ADDED */
+.page-usa .canada-why-section h2, /* <<< ADDED */
+.page-usa .canada-system-section h2, /* <<< ADDED */
+.page-usa .canada-application-section h2 { /* <<< ADDED */
   font-size: 2.2rem;
-  color: #0A4F8B; /* Logo Blue */
+  color: #0A4F8B;
   margin-bottom: 30px;
   text-align: center;
-  /* Removed underline effect for differentiation */
 }
 
-/* Reusing paragraph style */
-.usa-why-section p,
-.usa-system-section p,
-.usa-application-section p {
+/* Paragraph Style */
+.page-usa .usa-why-section p,
+.page-usa .usa-system-section p,
+.page-usa .usa-application-section p,
+.page-usa .uk-why-section p,      
+.page-usa .uk-system-section p,   
+.page-usa .uk-application-section p,
+.page-usa .australia-why-section p, /* <<< ADDED */
+.page-usa .australia-system-section p, /* <<< ADDED */
+.page-usa .australia-application-section p, /* <<< ADDED */
+.page-usa .canada-why-section p, /* <<< ADDED */
+.page-usa .canada-system-section p, /* <<< ADDED */
+.page-usa .canada-application-section p { /* <<< ADDED */
   font-size: 1.05rem;
-  color: #4a5568;
+  color: #4a5568; 
   line-height: 1.8;
   margin-bottom: 25px;
 }
 
-/* Reusing list style (Could change bullet if desired) */
-.usa-why-section ul,
-.usa-application-section ul {
+/* General List Style within .page-usa content */
+/* (These general rules already cover the new pages, no changes needed below this line for lists) */
+.page-usa .content-container ul { 
   list-style: none;
   padding-left: 0;
   margin-bottom: 30px;
 }
-
-.usa-why-section ul li,
-.usa-application-section ul li {
+.page-usa .content-container ul li { 
   margin-bottom: 15px;
   padding-left: 25px;
   position: relative;
   font-size: 1rem;
   color: #4a5568;
 }
-
-/* Reusing custom bullet */
-.usa-why-section ul li::before,
-.usa-application-section ul li::before {
-  content: '✓'; 
+.page-usa .content-container ul li::before { 
+  content: '✓';
   position: absolute;
   left: 0;
   top: 1px;
-  color: #d9534f; /* Logo Red */
+  color: #d9534f; 
   font-weight: bold;
   font-size: 1.1em;
 }
-
-.usa-why-section ul strong,
-.usa-system-section strong, /* Style strong tags in system section */
-.usa-application-section ul strong {
-  color: #1a202c;
+.page-usa .content-container ul strong, 
+.page-usa .system-levels strong { 
+  color: #1a202c; 
   font-weight: 600;
 }
-
-.system-levels p { /* Add spacing between system levels */
+.page-usa .system-levels p {
     margin-bottom: 15px;
 }
 
-/* --- Call to Action Section --- */
-/* Uses the existing .cta-section style */
-
-
-/* --- Responsive for USA Page --- */
-/* Uses existing responsive rules for .page-banner, h2 etc. defined earlier */
-@media (max-width: 768px) {
-  .usa-banner h1 { font-size: 2.5rem; } /* Adjust banner heading size */
-  .usa-why-section h2,
-  .usa-system-section h2,
-  .usa-application-section h2 {
-    font-size: 1.8rem; /* Adjust content heading size */
-  }
+/* USA/UK/AUS/CAN CTA Section Style */
+.page-usa .cta-section {
+    background-color: #e2e8f0; 
+    padding: 60px 5%;
+    text-align: center;
+    border-top: 1px solid #cbd5e0;
+    border-bottom: 1px solid #cbd5e0;
+}
+.page-usa .cta-section h2 {
+    font-size: 2rem;
+    color: #0A4F8B;
+    margin-bottom: 15px;
+}
+.page-usa .cta-section p {
+    font-size: 1.15rem;
+    color: #4a5568;
+    margin-bottom: 35px;
+    max-width: 650px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.8;
 }
 
+/* ===== END SCOPED MODERN USA STYLES ===== */
 
+/* ... (Keep original responsive styles at the end) ... */
