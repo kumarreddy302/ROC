@@ -20,6 +20,14 @@ li {
   list-style: none;
 }
 
+.container { /* Added a general container class */
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-left: 15px; /* Add some padding for smaller screens */
+  padding-right: 15px;
+}
+
+
 /* --- Main Navigation Header --- */
 .main-header {
   display: flex;
@@ -185,7 +193,7 @@ li {
 }
 
 .hero-section {
-  background-image: url('pexels-lara-jameson-8828455.jpg');
+  background-image: url('pexels-lara-jameson-8828455.jpg'); /* Ensure image name is correct */
   background-size: cover;
   background-position: center center;
   height: 80vh;
@@ -214,23 +222,15 @@ li {
   text-align: center;
   max-width: 800px;
   padding: 0 20px;
-  /* BUG FIX: 
-    The opacity:0 was here, making the whole container invisible. 
-    It has been moved to the elements below.
-  */
 }
 
-/* Apply animations with delays for sequential appearance */
 .hero-section h1 {
   font-size: 3rem;
   font-weight: 700;
   margin-bottom: 15px;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-  
-  /* BUG FIX: Add initial invisible state */
   opacity: 0;
   transform: translateY(20px);
-  
   animation: fadeInUp 0.8s ease-out forwards;
   animation-delay: 0.2s;
 }
@@ -239,11 +239,8 @@ li {
   font-size: 1.25rem;
   font-weight: 300;
   margin-bottom: 30px;
-
-  /* BUG FIX: Add initial invisible state */
   opacity: 0;
   transform: translateY(20px);
-  
   animation: fadeInUp 0.8s ease-out forwards;
   animation-delay: 0.5s;
 }
@@ -260,11 +257,8 @@ li {
   text-transform: uppercase;
   transition: all 0.3s ease;
   border: 2px solid #d9534f;
-  
-  /* BUG FIX: Add initial invisible state */
   opacity: 0;
   transform: translateY(20px);
-
   animation: fadeInUp 0.8s ease-out forwards;
   animation-delay: 0.8s;
 }
@@ -276,12 +270,95 @@ li {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
+/* ===== SERVICES SECTION STYLES ===== */
+
+.services-section {
+  padding: 60px 5%;
+  background-color: #ffffff; /* White background */
+  text-align: center;
+}
+
+.services-section h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.section-tagline { /* General tagline style for sections */
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 40px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns on desktop */
+  gap: 30px;
+  text-align: left; /* Align text left within cards */
+}
+
+.service-card {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden; /* Important for border-radius on images */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex; /* Use flexbox for vertical layout */
+  flex-direction: column; /* Stack header, content, image */
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.card-header {
+  padding: 15px 20px;
+}
+
+.card-header h3 {
+  color: #ffffff;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+/* Header Colors */
+.card-header.color-1 { background-color: #2a9d8f; } /* Teal Green */
+.card-header.color-2 { background-color: #0A4F8B; } /* Your Logo Blue */
+.card-header.color-3 { background-color: #d9534f; } /* Your Logo Red */
+.card-header.color-4 { background-color: #084173; } /* Darker Logo Blue */
+.card-header.color-5 { background-color: #8e44ad; } /* Purple */
+.card-header.color-6 { background-color: #e67e22; } /* Orange */
+
+.card-content {
+  padding: 20px;
+  flex-grow: 1; /* Allows content to take available space */
+}
+
+.card-content p {
+  color: #555;
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+.card-image img {
+  display: block; /* Remove bottom space */
+  width: 100%;
+  height: 200px; /* Fixed height for consistency */
+  object-fit: cover; /* Cover the area, cropping if needed */
+}
+
 
 /* ===== MOBILE RESPONSIVE STYLES ===== */
 
 @media (max-width: 992px) {
+  /* --- Header --- */
   .main-header {
-    /* Logo and hamburger are positioned by .logo and .hamburger */
     align-items: center;
   }
   
@@ -290,27 +367,42 @@ li {
   }
 
   .nav-wrapper {
-    position: absolute;
+    position: fixed; /* Changed to fixed for better mobile experience */
     top: 0;
-    left: 0;
-    width: 100%;
+    left: 0; /* Start hidden off-screen */
+    width: 80%; /* Don't take full width */
+    max-width: 350px; /* Max width */
     height: 100vh;
     background-color: #ffffff;
-    padding-top: 80px; /* Space for header */
-    transform: translateX(100%);
+    padding-top: 60px; /* Space for header */
+    transform: translateX(-100%); /* Start hidden to the left */
     opacity: 0;
     transition: transform 0.4s ease-out, opacity 0.4s ease-out;
     overflow-y: auto;
     flex-direction: column;
     justify-content: flex-start;
+    box-shadow: 4px 0px 15px rgba(0,0,0,0.1); /* Add shadow for slide-out */
+    z-index: 1001; /* Below hamburger */
   }
   
   .nav-wrapper.nav-active {
-    transform: translateX(0);
+    transform: translateX(0); /* Slide in */
     opacity: 1;
   }
+  
+   /* Add overlay when nav is active */
+  body.nav-open::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000; /* Below nav wrapper */
+  }
 
-  /* --- Mobile Secondary Nav --- */
+
   .secondary-nav {
     flex-direction: column;
     align-items: flex-start;
@@ -334,7 +426,7 @@ li {
     width: 100%;
   }
 
-  .register-btn {
+  .register-btn { /* Make register btn full width in mobile nav */
     width: 100%;
     text-align: center;
     padding: 12px;
@@ -342,7 +434,6 @@ li {
     margin-top: 15px;
   }
 
-  /* --- Mobile Main Nav --- */
   .main-nav {
     width: 100%;
   }
@@ -370,7 +461,6 @@ li {
     align-items: center;
   }
 
-  /* --- Mobile Dropdown Styling --- */
   .dropdown:hover .dropdown-content {
     display: none;
   }
@@ -391,10 +481,15 @@ li {
   .dropdown-content a {
     padding-left: 10%;
   }
+
+  /* --- Services --- */
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr); 
+  }
 }
 
-/* --- Mobile Responsive for Hero --- */
 @media (max-width: 768px) {
+  /* --- Hero --- */
   .hero-section {
     height: 70vh;
   }
@@ -406,6 +501,16 @@ li {
   .hero-tagline {
     font-size: 1rem;
   }
+
+  /* --- Services --- */
+  .services-section h2 {
+    font-size: 2rem;
+  }
 }
 
-
+@media (max-width: 576px) {
+   /* --- Services --- */
+  .services-grid {
+    grid-template-columns: 1fr; /* 1 column on small phones */
+  }
+}

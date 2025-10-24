@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,13 +10,11 @@
   
   <script src="script.js" defer></script>
 </head>
-<body>
-
-  <header class="main-header">
+<body> <header class="main-header">
     
     <div class="logo">
       <a href="index.php">
-        <img src="LOGO RUDRA.png" alt="Rudra Overseas Logo" />
+        <img src="LOGO RUDRA.png" alt="Rudra Overseas Logo" /> 
       </a>
     </div>
 
@@ -79,6 +78,3 @@
         </nav>
 
       </div> </div> </header>
-
-</body>
-</html>
