@@ -1698,7 +1698,6 @@ li {
   line-height: 1.8;
   margin-bottom: 25px;
 }
-
 /* Reusing list style */
 .gre-about-section ul,
 .gre-training-section ul {
@@ -1739,3 +1738,112 @@ li {
 
 /* --- Responsive for GRE Page --- */
 /* Uses existing responsive rules for .page-banner, h2 etc. defined earlier */
+
+
+
+
+/* ===== USA PAGE STYLES ===== */
+
+/* --- USA Banner (Slight variation) --- */
+.usa-banner {
+  /* Inherits from .page-banner but we can override */
+  padding: 70px 5% 60px; /* Slightly different padding */
+  /* Optional: Add a subtle USA-themed background pattern/image */
+   /* background-image: linear-gradient(rgba(10, 79, 139, 0.85), rgba(8, 65, 115, 0.85)), url('path/to/usa-bg.jpg'); */
+   /* background-size: cover; */
+   /* background-position: center; */
+}
+.usa-banner h1 { font-size: 3rem; } /* Slightly larger */
+
+
+/* --- Content Sections (Different BG pattern) --- */
+/* Uses existing .content-container style */
+
+.usa-why-section,
+.usa-system-section,
+.usa-application-section {
+  padding: 80px 5%;
+}
+
+/* New background pattern for USA page */
+.usa-why-section { background-color: #ffffff; }
+.usa-system-section { background-color: #f0f4f8; } /* Light grey/blue */
+.usa-application-section { background-color: #ffffff; }
+
+/* Section Headings (Slight variation - no underline) */
+.usa-why-section h2,
+.usa-system-section h2,
+.usa-application-section h2 {
+  font-size: 2.2rem;
+  color: #0A4F8B; /* Logo Blue */
+  margin-bottom: 30px;
+  text-align: center;
+  /* Removed underline effect for differentiation */
+}
+
+/* Reusing paragraph style */
+.usa-why-section p,
+.usa-system-section p,
+.usa-application-section p {
+  font-size: 1.05rem;
+  color: #4a5568;
+  line-height: 1.8;
+  margin-bottom: 25px;
+}
+
+/* Reusing list style (Could change bullet if desired) */
+.usa-why-section ul,
+.usa-application-section ul {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 30px;
+}
+
+.usa-why-section ul li,
+.usa-application-section ul li {
+  margin-bottom: 15px;
+  padding-left: 25px;
+  position: relative;
+  font-size: 1rem;
+  color: #4a5568;
+}
+
+/* Reusing custom bullet */
+.usa-why-section ul li::before,
+.usa-application-section ul li::before {
+  content: '✓'; 
+  position: absolute;
+  left: 0;
+  top: 1px;
+  color: #d9534f; /* Logo Red */
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+.usa-why-section ul strong,
+.usa-system-section strong, /* Style strong tags in system section */
+.usa-application-section ul strong {
+  color: #1a202c;
+  font-weight: 600;
+}
+
+.system-levels p { /* Add spacing between system levels */
+    margin-bottom: 15px;
+}
+
+/* --- Call to Action Section --- */
+/* Uses the existing .cta-section style */
+
+
+/* --- Responsive for USA Page --- */
+/* Uses existing responsive rules for .page-banner, h2 etc. defined earlier */
+@media (max-width: 768px) {
+  .usa-banner h1 { font-size: 2.5rem; } /* Adjust banner heading size */
+  .usa-why-section h2,
+  .usa-system-section h2,
+  .usa-application-section h2 {
+    font-size: 1.8rem; /* Adjust content heading size */
+  }
+}
+
+
