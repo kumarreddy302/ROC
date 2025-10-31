@@ -985,7 +985,7 @@ body.about .card {
 
 
 
-<style>
+
 /* Toast container (top-right) */
 .toast-stack {
   position: fixed;
@@ -1054,4 +1054,143 @@ body.about .card {
 @keyframes toast-out {
   to { opacity: 0; transform: translateY(-8px); }
 }
-</style>
+
+
+/* FAQ Section */
+.faq-section {
+  background: #f9fafb;
+  padding: 80px 20px;
+}
+
+.faq-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.faq-section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  font-weight: 600;
+  color: #1e293b;
+  border-left: 5px solid #3b82f6;
+  padding-left: 10px;
+}
+
+/* FAQ Items */
+.faq-item {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  margin-bottom: 16px;
+  overflow: hidden;
+  border: 1px solid #e2e8f0;
+  transition: box-shadow 0.3s ease;
+}
+
+.faq-item:hover {
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+}
+
+/* Summary (Question) */
+.faq-question {
+  cursor: pointer;
+  padding: 18px 24px;
+  font-weight: 600;
+  font-size: 1.05rem;
+  color: #0f172a;
+  position: relative;
+  list-style: none;
+}
+
+.faq-question::-webkit-details-marker {
+  display: none;
+}
+
+.faq-question::after {
+  content: "+";
+  position: absolute;
+  right: 24px;
+  font-size: 1.4rem;
+  color: #3b82f6;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+details[open] .faq-question::after {
+  content: "−";
+  color: #ef4444;
+  transform: rotate(180deg);
+}
+
+/* Answer */
+.faq-answer {
+  padding: 0 24px 20px;
+  line-height: 1.6;
+  font-size: 1rem;
+  color: #475569;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* CTA Section */
+.cta-section {
+  background: #1e3a8a;
+  color: #fff;
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.cta-section h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.cta-section p {
+  max-width: 700px;
+  margin: 0 auto 20px;
+  color: #cbd5e1;
+  font-size: 1.1rem;
+}
+
+.cta-button-alt {
+  display: inline-block;
+  background: #fff;
+  color: #1e3a8a;
+  padding: 12px 26px;
+  font-weight: 600;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.cta-button-alt:hover {
+  background: #f1f5f9;
+  transform: translateY(-2px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .page-banner h1 {
+    font-size: 2rem;
+  }
+
+  .faq-question {
+    font-size: 1rem;
+    padding: 16px 20px;
+  }
+
+  .faq-answer {
+    padding: 0 20px 16px;
+  }
+
+  .cta-section {
+    padding: 60px 16px;
+  }
+
+  .cta-section h2 {
+    font-size: 1.6rem;
+  }
+}

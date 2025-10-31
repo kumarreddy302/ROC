@@ -82,5 +82,15 @@
   </section>
 
 </main>
+<script>
+document.querySelectorAll('.faq-item').forEach(item => {
+  item.addEventListener('toggle', e => {
+    if (item.open) {
+      item.style.animation = 'fadeIn 0.3s ease';
+    }
+  });
+});
+</script>
+
 
 <?php require_once 'footer.php'; ?>
