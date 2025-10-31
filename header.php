@@ -44,10 +44,9 @@ $is_company_active     = in_array($current_page, $company_pages, true);
       <div class="secondary-nav">
         <div class="secondary-links">
           <a href="#">Application Process</a>
-          <a href="#">Testimonials</a>
-          <a href="#">FAQ's</a>
-          <a href="#">News & Updates</a>
-          <a href="#" class="disabled">Blogs</a>
+          <a href="testimonials.php">Testimonials</a>
+          <a href="faq.php">FAQ's</a>
+          <a href="index.php#news">News & Updates</a>
         </div>
         <button class="register-btn">Register Now</button>
       </div>
@@ -92,7 +91,7 @@ $is_company_active     = in_array($current_page, $company_pages, true);
             </div>
           </li>
 
-          <li><a href="#">Our Events</a></li>
+          <li><a href="index.php#gallery">Gallery</a></li>
         </ul>
       </nav>
     </div>
